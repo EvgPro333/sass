@@ -1,0 +1,44 @@
+@use "../../lib/service.scss" as s;
+
+.page {
+	font-family: "roboto", sans-serif;
+	font-size: s.size();
+	// background-color: s.color('bg');
+}
+
+// .section {
+// display:flex;
+// justify-content:center
+// }
+
+
+// $background-colorMap: (
+// 	on:rgb(0, 0, 255),
+// 	tw:rgb(0, 255, 26),
+// 	th:rgb(251, 255, 0),
+// 	fo:rgb(255, 0, 0),
+// );
+
+// .section__content {
+// 	// background: rgba(203, 209, 150, 0.124);
+// 	max-width: 1200px;
+// 	width: 100%;
+// 	padding: 0 s.space(4);
+	
+// 	@each $key, $value in s.$screenMap {
+// 		@media all and (width < $value) {
+// 			max-width: map-get($contentSizeMap, $key);
+// 			// background-color: map-get($background-colorMap, $value);
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+@use "./space.scss" as s;
+@use "./var.scss" as var;
+
+$contentSizeMap: (
+	desktop: 1100px,
+	leptop: 900px,
+	tablet: 700px,
+	mobile: 500px,
+	moile: 300px,
+	);
+.section {
+	display:flex;
+	justify-content:center;
+	padding: 0 s.space(4);
+	}
+.section__content {
+	max-width: 1200px;
+	width: 100%;
+	
+	@each $key, $value in var.$screenMap {
+		@media all and (width < $value) {
+			max-width: map-get($contentSizeMap, $key);
+			// background-color: map-get($background-colorMap, $value);
+			}
+		}
+	}
+.section__double {
+	// display:flex;
+	// justify-content:center;
+	// max-height: 700px;
+	// height:100vh;
+	// background-size: cover;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	// grid-template-rows: min-content;
+	// gap:0;
+	
+	// @media all and (width > s.screen('desktop')) {
+		// background-size: 1920px;
+		// }
+		@media all and (width < var.screen('leptop')) {
+		grid-template-columns: 1fr;
+		// background-size: 150%;
+		// max-height: 600px;
+		}
+	}

@@ -1,0 +1,33 @@
+@use "./var.scss";
+@use "./space.scss";
+
+@mixin linkAction {
+	color: var.color('primary');
+	position: relative;
+	padding-right: calc(space.space(2) + 7px);
+	&::after {
+		display: block;
+		content:'';
+		width: 7px;
+		height: 14px;
+		background-image: url('/svg/header/arrowAction.svg');
+		position: absolute;
+		right: 0;
+		top: calc(50% - 8px);
+		}
+	}
+@mixin linkActionpl {
+	color: var.color('primary-light');
+	position: relative;
+	padding-right: calc(space.space(2) + 7px);
+	&::after {
+		display: block;
+		content:'';
+		width: 7px;
+		height: 14px;
+		background-image: url('/svg/header/arrowActionpl.svg');
+		position: absolute;
+		right: 0;
+		top: calc(50% - 8px);
+		}
+	}
